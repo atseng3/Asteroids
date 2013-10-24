@@ -1,0 +1,32 @@
+<html>
+<head>
+  <script src="./keymaster.min.js"></script>
+  <script src="./inherits.js"></script>
+  <script src="./moving_object.js"></script>
+  <script src="./asteroid.js"></script>
+  <script src="./bullet.js"></script>
+  <script src="./ship.js"></script>
+  <script src="./game.js"></script>
+</head>
+
+<body>
+  <script>
+  var canvas = document.createElement("canvas");
+  canvas.setAttribute("width", 1024);
+  canvas.setAttribute("height", 720);
+
+  var body = document.getElementsByTagName("body")[0];
+  body.appendChild(canvas);
+
+  var ctx = canvas.getContext("2d");
+
+  // var img = new Image();
+  // img.onload = function () {
+  //   ctx.drawImage(img, xOffset, yOffset);
+  // };
+  // img.src = 'http://discovermagazine.com/~/media/import/images/4/c/0/abell1689.jpg';
+
+  var game = new Asteroids.Game(ctx, 1024, 720).start()
+  </script>
+  </body>
+</html>
